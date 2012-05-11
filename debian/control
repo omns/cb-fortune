@@ -1,0 +1,14 @@
+Source: cb-fortune
+Section: misc
+Priority: extra
+Maintainer: Philip Newborough <corenominal@corenominal.org>
+Build-Depends: debhelper (>= 5.0.0)
+Standards-Version: 3.9.1
+Homepage: http://crunchbang.org/
+
+Package: cb-fortune
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, libnotify-bin, fortune, python-notify
+Description: test script for libnotify.
+ Have Waldorf say a little adage on your desktop.
+ .
