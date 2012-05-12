@@ -8,13 +8,14 @@ import string
 if __name__ == '__main__':
     if not pynotify.init("cb-fortune"):
         sys.exit(1)
-    if len(sys.argv)==1:
+    if len(sys.argv) == 1:
         title = "Waldorf says,"
-        p = os.popen("fortune -s | sed 's/^[ \t]*//'|sed 's/[ \t]/ /'|sed 's/^A:/\\nA:/'|sed 's/^--/\\n--/'","r")
+        p = os.popen("fortune -s | sed 's/^[ \t]*//'|sed 's/[ \t]/ /'|sed 's/^A:/\\nA:/'|sed 's/^--/\\n--/'", "r")
         message = ""
         while 1:
             line = p.readline()
-            if not line: break
+            if not line:
+                break
             message = message + line
         image = "/usr/share/pixmaps/waldorf.png"
         n = pynotify.Notification(title, message, image)
